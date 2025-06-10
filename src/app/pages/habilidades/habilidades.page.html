@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Habilidades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="skills-container">
+    <h2>Habilidades obtidas principalmente nessa disciplina</h2>
+    
+    <div class="skill-item" *ngFor="let skill of skills">
+      <div class="skill-header">
+        <span class="skill-name">{{ skill.name }}</span>
+        <span class="skill-percentage">{{ skill.level }}%</span>
+      </div>
+      <ion-progress-bar 
+        [value]="skill.level / 100" 
+        [color]="getProgressColor(skill.level)">
+      </ion-progress-bar>
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Observações</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>As habilidades acima foram desenvolvidas durante o curso de Análise e Desenvolvimento de Sistemas, especialmente na disciplina Mobile 1. A avaliação é baseada no meu nível atual de conhecimento e experiência prática com cada tecnologia.</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

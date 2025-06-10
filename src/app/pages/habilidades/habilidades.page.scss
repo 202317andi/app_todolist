@@ -1,0 +1,59 @@
+.skills-container {
+  padding: 20px;
+}
+
+h2 {
+  color: var(--ion-color-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: var(--ion-color-light);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: var(--ion-color-dark);
+  font-size: 1rem;
+}
+
+.skill-percentage {
+  font-weight: 500;
+  color: var(--ion-color-medium);
+  font-size: 0.9rem;
+}
+
+ion-progress-bar {
+  height: 8px;
+  border-radius: 4px;
+}
+
+ion-card {
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+ion-card-title {
+  color: var(--ion-color-primary);
+  font-weight: 600;
+}
+
+ion-card-content p {
+  color: var(--ion-color-dark);
+  line-height: 1.5;
+  text-align: justify;
+}

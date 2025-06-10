@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="fecharModal()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detalhe projeto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="project-detail-container">
+    <h1>{{ projeto.titulo }}</h1>
+    
+    <div class="project-image">
+      <img [src]="projeto.imagem" [alt]="projeto.titulo" />
+    </div>
+    
+    <p class="project-description">{{ projeto.descricaoCompleta }}</p>
+    
+    <div class="project-link" *ngIf="projeto.link">
+      <p>Link do Projeto: 
+        <a [href]="projeto.link" target="_blank" rel="noopener">{{ projeto.link }}</a>
+      </p>
+    </div>
+    
+    <div class="project-technologies">
+      <h3>Tecnologias utilizadas:</h3>
+      <ion-chip *ngFor="let tech of projeto.tecnologias" color="primary">
+        <ion-label>{{ tech }}</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+</ion-content>

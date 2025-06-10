@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Início</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="profile-container">
+    <div class="profile-image">
+      <img src="assets/profile.jpg.jpg" alt="Minha foto" />
+    </div>
+    
+    <div class="welcome-section">
+      <h1>Olá, eu sou Anderson Melara</h1>
+      <p class="subtitle">Estudante de Análise e Desenvolvimento de Sistemas</p>
+      <p class="description">Aqui você pode conhecer mais sobre mim!</p>
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informações de Contato Básicas</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Email</h3>
+            <p>andimelara170hotmail.com</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item lines="none">
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Telefone</h3>
+            <p>(54) 99999-6404</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item lines="none">
+          <ion-icon name="location-outline" slot="start"></ion-icon>
+          <ion-label>
+            <h3>Localização</h3>
+            <p>Tapejara, RS</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item lines="none">
+          <ion-icon name="logo-github" slot="start"></ion-icon>
+          <ion-label>
+            <h3>GitHub</h3>
+            <p>github.com/202317andi</p>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

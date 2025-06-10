@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="contact-container">
+    <h2>Entre em contato comigo</h2>
+    <p class="description">Preencha o formulário abaixo para enviar uma mensagem.</p>
+
+    <form #contactForm="ngForm">
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="contact.nome" 
+          name="nome"
+          label="Nome" 
+          labelPlacement="floating"
+          placeholder="Digite seu nome"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="contact.email" 
+          name="email"
+          label="Email" 
+          labelPlacement="floating"
+          placeholder="Digite seu email"
+          type="email"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea 
+          [(ngModel)]="contact.mensagem" 
+          name="mensagem"
+          label="Mensagem" 
+          labelPlacement="floating"
+          placeholder="Digite sua mensagem"
+          rows="5"
+          required>
+        </ion-textarea>
+      </ion-item>
+
+      <ion-button 
+        expand="block" 
+        (click)="enviarMensagem()" 
+        [disabled]="!contactForm.valid"
+        class="send-button">
+        ENVIAR
+      </ion-button>
+    </form>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Outras formas de contato</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item lines="none">
+          <ion-icon name="mail-outline" slot="start"></ion-icon>
+          <ion-label>andimelara17&#64;hotmail.com</ion-label>
+        </ion-item>
+        
+        <ion-item lines="none">
+          <ion-icon name="call-outline" slot="start"></ion-icon>
+          <ion-label>(54) 99999-6404</ion-label>
+        </ion-item>
+        
+        <ion-item lines="none">
+          <ion-icon name="logo-linkedin" slot="start"></ion-icon>
+          <ion-label>linkedin.com/in/andersonmelara</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
